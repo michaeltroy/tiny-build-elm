@@ -4,7 +4,7 @@ Tired of dealing with a front-end mess for tiny websites or prototyping? Tiny Bu
 
 Say hello to Tiny Build Elm:
 
-- NPM for package management (duh!)
+- NPM for required npm packages
 - NPM to run our scripts
 - Elm make to build our Elm files
 - Chokidar to watch our Elm files
