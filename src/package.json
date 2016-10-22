@@ -7,10 +7,12 @@
   "elm-version": "~0.17.1",
   "dependencies": {
     "autoprefixer": "^6.3.7",
-    "chokidar": "^1.6.0",
     "clean-css": "^3.3.7",
     "cssnext": "^1.8.3",
-    "normalize.css": "^3.0.3",
+    "normalize.css": "^3.0.3"
+  },
+  "devDependencies": {
+    "chokidar-cli": "^1.2.0",
     "superstatic": "^4.0.3",
     "ttab": "^0.3.1"
   },
@@ -26,10 +28,7 @@
     "watch:elm": "chokidar '**/*.elm' -c 'elm make Main.elm --output ../public/build/index.js' --initial",
     "watch:css": "cssnext --watch index.css ../public/build/index.css --verbose",
     "watch": "npm run build ; npm run watch:elm & npm run watch:css",
-    "start": "ttab -G npm run watch ; superstatic -p 4000 ../public"
+    "start": "ttab -G npm run watch ; browser-sync start --files '../public/build/*.css, ../public/build/*.js' --server '../public/'"
   },
-  "private": true,
-  "devDependencies": {
-    "chokidar-cli": "^1.2.0"
-  }
+  "private": true
 }
