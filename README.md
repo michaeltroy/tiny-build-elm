@@ -30,21 +30,4 @@ Clean: Deletes just the build dir ```npm run clean```
 
 ## Server
 
-Superstatic is a cool simple webserver that supports HTML pushState.
-
-Start the webserver.
-
-```superstatic -p 4000 public```
-
-For single page apps add a ```superstatic.json``` file to the root of your project.
-
-```
-{
-  "rewrites": [
-    {
-      "source": "**",
-      "destination": "/index.html"
-    }
-  ]
-}
-```
+Uses BrowserSync.
